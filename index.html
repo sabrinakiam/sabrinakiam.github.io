@@ -5,11 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link href="bootstrap.css" rel="stylesheet">
+  <link href="css/bootstrap.css" rel="stylesheet">
 
-  <link href="site.css" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="css/site.css" rel="stylesheet">
+  <script src="js/jquery-3.1.0.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
 </head>
@@ -158,36 +159,62 @@
 	<div class="row text-center">
 		<div class="col-sm-3">
 			<!-- PERSONAL SITE -->
-	      <img id="myImg" src="pics/site.png" class="img-responsive" style="width:100%" alt="Personal Site (HTML/CSS/JS)">
-	      <div id="myModal" class="modal">
-	      	  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
-	      	   <img class="modal-content" id="img01">
-	      	   <div id="caption"></div>
-	      </div>
-  			<script src="site.js"> </script>
-
+	     		<a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Personal Site (HTML/CSS/JS)" data-caption="" data-image="pics/site.png" data-target="#image-gallery">
+                	<img class="img-responsive" src="pics/site.png" alt="Short alt text">
+           		</a>
 	    </div>
 	    <div class="col-sm-3">
 	   <!-- FINANCE TRACKR -->
-	      	<img id="financetracker" src="pics/fintracker.png" class="img-responsive" style="width:100%" alt="Finance Tracker">
+	      		<a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Finance Tracker (PHP)" data-caption="" data-image="pics/fintracker.png" data-target="#image-gallery">
+                	<img class="img-responsive" src="pics/fintracker.png" alt="Short alt text">
+           		</a>
 	    </div>
 	    <div class="col-sm-3">
 	<!-- RESTAURANT AND CHILL  -->
-	      <img id="myImg" src="pics/RestAndChill.png" class="img-responsive" style="width:100%" alt="Image">
+	      		<a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Restaurant Reservation System (Java)" data-caption="" data-image="pics/RestAndChill.png" data-target="#image-gallery">
+                	<img class="img-responsive" src="pics/RestAndChill.png" alt="Short alt text">
+            	</a>
 	    </div>
 	</div>
 	<!--ROW 2 PROJECTS-->
 	<div class="row text-center">
 		    <div class="col-sm-3">
 		    	<!-- AMAZON -- >
-		      <img id="myImg" src="pics/amazon.png" class="img-responsive" style="width:100%" alt="Image">
+		      	<a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Amazon Recreated (C++)" data-caption="" data-image="pics/amazon.png" data-target="#image-gallery">
+                	<img class="img-responsive" src="pics/amazon.png" alt="Short alt text">
+            	</a>
 		    </div>
 		    <div class="col-sm-3">
 		    	<!-- PUZZLE SOLVER-->
-		      <img id="myImg" src="pics/puzzlesolver.png" class="img-responsive" style="width:100%" alt="Image">
+		      	<a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="N-Tile Puzzle Solver (C++)" data-caption="" data-image="pics/puzzlesolver.png" data-target="#image-gallery">
+               		<img class="img-responsive" src="pics/puzzlesolver.png" alt="Short alt text">
+            	</a>
 		    </div>
 	</div>
 </div>
+
+<!--- MODAL STUFF -->
+<div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="
+	myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="image-gallery-title"></h4>
+                 	<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+
+            </div>
+            <div class="modal-body">
+                <img id="image-gallery-image" class="img-responsive" src="">
+            </div>
+            <div class="modal-footer">
+                <div class="col-md-8 text-justify" id="image-gallery-caption">
+                    This text will be overwritten by jQuery
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/modal.js"> </script>
 
 <div class="container-fluid bg5 text-center" id="contactsection">
   		<a href="mailto:sabrina.kiamilev@gmail.com" target="_blank">
